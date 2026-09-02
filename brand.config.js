@@ -73,11 +73,14 @@ export const BRAND = {
   backToSiteUrl: "https://venturaspirits.com",
   backToSiteLabel: "Back to Main Site",
 
+  //  Real hrefs, confirmed 200 on 2026-09-02. Do not infer these from the
+  //  nav labels — "Visit" and "Stores" resolve to /pages/visit-us and
+  //  /pages/store-locator, and the obvious guesses both 404.
   nav: [
     { label: "Shop",    href: "#grid" },
-    { label: "Recipes", href: "https://venturaspirits.com/pages/recipes", external: true },
-    { label: "Visit",   href: "https://venturaspirits.com/pages/visit",   external: true },
-    { label: "Stores",  href: "https://venturaspirits.com/pages/stores",  external: true },
+    { label: "Recipes", href: "https://venturaspirits.com/pages/recipes",       external: true },
+    { label: "Visit",   href: "https://venturaspirits.com/pages/visit-us",      external: true },
+    { label: "Stores",  href: "https://venturaspirits.com/pages/store-locator", external: true },
   ],
 
   // Announcement bar. DISPLAY ONLY — never the enforcement layer. Do not
