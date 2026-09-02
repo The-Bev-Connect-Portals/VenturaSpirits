@@ -7,7 +7,7 @@ Built from `portal-template` on 2026-09-02. Seller of record is Go-To Gifting LL
 | Slug | `ventura-spirits` |
 | Live brand site | https://venturaspirits.com |
 | Shopify backend | `bro-basket.myshopify.com` (shared) |
-| Headless publication | `gid://shopify/Publication/212731658439` |
+| Headless publication | `gid://shopify/Publication/212731658459` |
 | Collection handle | `portal-ventura-spirits` |
 | Cart attribute | `portal = ventura-spirits` |
 | Catalog | 16 SKUs — alcohol only; merch and $0 trade assets excluded |
@@ -22,7 +22,7 @@ Built from `portal-template` on 2026-09-02. Seller of record is Go-To Gifting LL
 - [x] Render smoke test passing
 - [ ] **Real weights for the 4 flagged SKUs** (see `templates/README-import.md`)
 - [ ] Matrixify import run
-- [ ] Products published to publication `212731658439`
+- [ ] Products published to publication `212731658459`
 - [ ] Netlify site, form detection enabled + redeployed, notification email set
 - [ ] Shopify Flow rule on cart attribute `portal = ventura-spirits`
 - [ ] Confirm the shipping-eligible state list for SPIRITS (narrower than beer)
