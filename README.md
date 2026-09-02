@@ -21,14 +21,15 @@ Built from `portal-template` on 2026-09-02. Seller of record is Go-To Gifting LL
 - [x] Storefront token verified against bro-basket 2026-04
 - [x] Render smoke test passing
 - [ ] **Real weights for the 4 flagged SKUs** (see `templates/README-import.md`)
-- [ ] Matrixify import run
-- [ ] Products published to publication `212731658459`
+- [x] Catalog loaded (Admin GraphQL, not Matrixify — 16 products)
+- [x] Products published to publication 212731658459
 - [ ] Netlify site, form detection enabled + redeployed, notification email set
 - [ ] Shopify Flow rule on cart attribute `portal = ventura-spirits`
 - [ ] Confirm the shipping-eligible state list for SPIRITS (narrower than beer)
-- [ ] Demo-to-live flip (`demoProducts: []`)
+- [x] Demo-to-live flip done — portal reads the live catalog
 
-**Currently in demo mode.**
+**LIVE.** The grid reads the real Shopify catalog. Two SKUs are live with 0 g
+weight — see `templates/README-import.md` before configuring shipping rates.
 
 ## This is a distillery, not a brewery
 

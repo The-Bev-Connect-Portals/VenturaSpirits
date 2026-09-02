@@ -1,4 +1,37 @@
-# Matrixify import — Ventura Spirits
+# Catalog load — Ventura Spirits
+
+## What actually happened (2026-09-02)
+The catalog was **not** loaded with Matrixify. All 16 products were created
+directly through the Admin GraphQL API (`productSet`). The CSV below is kept
+as the record of intent and as a fallback, but it was not the mechanism.
+
+What was created:
+
+- Collection `portal-ventura-spirits` — `gid://shopify/Collection/540875653339`,
+  manual (`ruleSet: null`).
+- 16 products, ACTIVE, published to `gid://shopify/Publication/212731658459`.
+- Verified through this brand's own Storefront token: 16/16 visible,
+  16/16 `availableForSale`.
+
+## ⚠ inventoryPolicy must be CONTINUE, not DENY
+Created with `DENY` first (what the CSV said) and all 16 came back
+`availableForSale: false` — tracked inventory at zero stock reads as sold out,
+so the grid would have been entirely sold-out cards. Fig Mountain runs
+`CONTINUE` on every SKU, which is what lets a portal sell while Go-To Gifting
+fulfils from brand-held stock. All 16 corrected; CSV updated to match.
+
+## ⚠ Still outstanding on the live catalog
+- **Two SKUs are live with 0 g weight**: `ventura-spirits-reppo-agave` and
+  `ventura-spirits-strawberry-thief-liqueur`. Two more carry suspect weights
+  (`strawberry-thief-brandy` 750 g, `ojai-pixie-cello` 816 g — both 750 ml
+  bottles). All four are tagged `WEIGHT-CHECK`; find them in admin with
+  `tag:WEIGHT-CHECK`. Zero-weight spirits will quote nonsense shipping.
+- **Agave Liqueur has no image.** Their only asset is a `.heic`, which
+  browsers render unreliably, so it was deliberately not attached. The
+  product will show a placeholder until a JPEG arrives.
+
+---
+
 
 ## Files
 - `ventura_spirits_matrixify_import.csv` — 16 rows, alcohol only.
