@@ -2,13 +2,18 @@
 
 Built from `portal-template` on 2026-09-02. Seller of record is Go-To Gifting LLC.
 
+**Migrated 2026-09-11:** backend moved from the shared `bro-basket` store to
+`aliquorshop` (BoozeFinders), where the catalog is now sold. The 16 SKUs also
+still exist on go-togifting.com under identical handles — decide whether those
+get unpublished before this is pointed at a public domain.
+
 | | |
 |---|---|
 | Slug | `ventura-spirits` |
 | Live brand site | https://venturaspirits.com |
-| Shopify backend | `bro-basket.myshopify.com` (shared) |
-| Headless publication | `gid://shopify/Publication/212731658459` |
-| Collection handle | `portal-ventura-spirits` |
+| Shopify backend | `aliquorshop.myshopify.com` (Booze Finders) |
+| Headless storefront | Ventura Spirits (`headless/374742`) |
+| Collection handle | `portal-ventura-spirits` (SMART — tag `portal:ventura-spirits`) |
 | Cart attribute | `portal = ventura-spirits` |
 | Catalog | 16 SKUs — alcohol only; merch and $0 trade assets excluded |
 | Portal domain | Netlify default for now |
@@ -18,11 +23,12 @@ Built from `portal-template` on 2026-09-02. Seller of record is Go-To Gifting LL
 - [x] Config filled; palette sampled from the live site, type resolved
 - [x] Logo and favicon rendered from their official SVG
 - [x] Matrixify CSV built; all 16 image URLs verified 200
-- [x] Storefront token verified against bro-basket 2026-04
+- [x] Storefront token verified against aliquorshop 2026-04 (auth: "Booze Finders")
 - [x] Render smoke test passing
 - [ ] **Real weights for the 4 flagged SKUs** (see `templates/README-import.md`)
 - [x] Catalog loaded (Admin GraphQL, not Matrixify — 16 products)
-- [x] Products published to publication 212731658459
+- [x] Products published to the Ventura Spirits Headless channel on BoozeFinders
+- [ ] **Publish the `portal-ventura-spirits` COLLECTION to that same channel** — products alone are not enough; the grid renders empty until this is done
 - [ ] Netlify site, form detection enabled + redeployed, notification email set
 - [ ] Shopify Flow rule on cart attribute `portal = ventura-spirits`
 - [ ] Confirm the shipping-eligible state list for SPIRITS (narrower than beer)

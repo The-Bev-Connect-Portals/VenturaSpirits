@@ -14,7 +14,8 @@ export const BRAND = {
   //    Shopify product tag  portal:ventura-spirits
   //    collection           portal-ventura-spirits
   //    cart attribute       portal = ventura-spirits
-  //    Headless channel     Ventura Spirits (Publication/212731658459)
+  //    Shopify store        aliquorshop.myshopify.com (Booze Finders)
+  //    Headless storefront  Ventura Spirits (headless/374742)
   //
   slug: "ventura-spirits",
 
@@ -192,19 +193,19 @@ export const BRAND = {
     "ventura-spirits-agave-liqueur",
   ],
 
-  //  ⚠ Created by the Matrixify import's "Custom Collections" column — do
-  //    NOT hand-create it. These portal collections are MANUAL, not smart;
-  //    verified against portal-fig-mountain, which returns ruleSet: null.
+  //  ⚠ SMART collection on BoozeFinders, rule: TAG EQUALS portal:ventura-spirits
+  //    (Collection/358332268736). Tagging a product is the ONE action that
+  //    puts it in this grid. Must be published to the Ventura Spirits
+  //    Headless channel or the grid renders empty with no error.
   collectionHandle: "portal-ventura-spirits",
 
-  shopDomain: "bro-basket.myshopify.com",
+  shopDomain: "aliquorshop.myshopify.com",
 
   //  Public Storefront token for the Ventura Spirits Headless storefront.
   //  Read-only and safe client-side. NEVER an Admin token here.
-  //  Verified against bro-basket 2026-04 on 2026-09-02: authenticates as
-  //  "The BroBasket" and returns the same 38-product baseline as the Fig
-  //  Mountain and Topa Topa tokens, which is the expected shape.
-  storefrontToken: "f4455ced9faf77197408bc52de3364f9",
+  //  Verified against aliquorshop 2026-04 on 2026-09-11: authenticates as
+  //  "Booze Finders" and returns all 16 Ventura Spirits SKUs by vendor.
+  storefrontToken: "413576130a018eb52300aa8c4469bce4",
   apiVersion: "2026-04",
 
   //  ⚠ Flow must key on the CART ATTRIBUTE, not product tags, and match

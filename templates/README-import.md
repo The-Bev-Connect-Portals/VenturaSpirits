@@ -1,5 +1,13 @@
 # Catalog load — Ventura Spirits
 
+> **HISTORICAL — superseded 2026-09-11.** Everything below describes the
+> original load into the shared `bro-basket` store. The portal now runs
+> against `aliquorshop.myshopify.com` (BoozeFinders), where the catalog is
+> 16 SKUs in a SMART collection (`Collection/358332268736`, rule
+> `TAG EQUALS portal:ventura-spirits`). The store domain, publication ID and
+> Storefront token in this file are the OLD ones — do not copy them.
+> The weight defects flagged at the bottom are still open.
+
 ## What actually happened (2026-09-02)
 The catalog was **not** loaded with Matrixify. All 16 products were created
 directly through the Admin GraphQL API (`productSet`). The CSV below is kept
